@@ -3,11 +3,13 @@
 namespace App\Http\Livewire\Supervision;
 
 use Livewire\Component;
+use App\Models\supervision\Tabels;
 
 class Home extends Component
 {
     public function render()
     {
-        return view('livewire.supervision.home') -> layout ('adminlte::page');
+        $Fold = Tabels::paginate(1);
+        return view('livewire.supervision.home', compact('Fold')) -> layout ('adminlte::page');
     }
 }

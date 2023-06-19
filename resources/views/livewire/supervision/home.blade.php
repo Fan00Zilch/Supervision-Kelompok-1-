@@ -23,7 +23,31 @@
                     <b>Research Data</b>
                </div>
             </div>
-
+            <h2></h2>
+            {{-- Tabel --}}
+            <div class="card">
+                <div class="card-body">
+                     
+                    <table class="table">
+                        <tr>
+                            <td class="col-sm-1 font-size-lg">
+                            @foreach($Fold as $item)
+                                {{$loop->iteration}}
+                            @endforeach</td>
+                            <td class="col-sm-6 text-center">Nama Mahasiswa</td>
+                            <td class="col-sm-4 text-left">
+                                @foreach($Fold as $item)
+                                    {{$item->research_code}}
+                                @endforeach
+                            </td>  
+                        </tr>
+                    </table>
+                    <div align="right">
+                        @livewire('supervision.fold.idx') 
+                    </div> 
+                </div>
+            </div>
+        
         </div>
 
         <div class="card-footer text-muted">
