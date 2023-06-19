@@ -27,21 +27,20 @@
             {{-- Tabel --}}
             <div class="card">
                 <div class="card-body">
-                     
+                    @foreach($Fold as $item) 
                     <table class="table">
                         <tr>
                             <td class="col-sm-1 font-size-lg">
                             @foreach($Fold as $item)
                                 {{$loop->iteration}}
                             @endforeach</td>
-                            <td class="col-sm-6 text-center">Nama Mahasiswa</td>
+                            <td class="col-sm-6 text-center">{{$item->username}}</td>
                             <td class="col-sm-4 text-left">
-                                @foreach($Fold as $item)
-                                    {{$item->research_code}}
-                                @endforeach
+                                {{$item->research_code}}
                             </td>  
                         </tr>
                     </table>
+                    @endforeach
                     <div align="right">
                         @livewire('supervision.fold.idx') 
                     </div> 
