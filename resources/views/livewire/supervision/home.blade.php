@@ -27,14 +27,16 @@
             {{-- Tabel --}}
             <div class="card">
                 <div class="card-body">
-                    @foreach($Fold as $item) 
+                    @foreach($Fold1 as $item) 
                     <table class="table">
                         <tr>
                             <td class="col-sm-1 font-size-lg">
-                            @foreach($Fold as $item)
+                            @foreach($Fold1 as $item)
                                 {{$loop->iteration}}
                             @endforeach</td>
-                            <td class="col-sm-6 text-center">{{$item->username}}</td>
+                            <td class="col-sm-6 text-center"> 
+                                {{$item->username}}
+                            </td>
                             <td class="col-sm-4 text-left">
                                 {{$item->research_code}}
                             </td>  
